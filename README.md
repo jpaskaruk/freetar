@@ -3,6 +3,7 @@
 This is like [Invidious](https://invidious.io/) but only for [Ultimate Guitar](https://www.ultimate-guitar.com/).  
 
 This is a fork of Freetar, which makes one modification: The ability to set the CSS 'column-count' property in the UI (see screenshot). This enables me to display long charts without scrolling on my 27" 1440p display.
+(Note "Cols" option next to "Show chords," "Autoscroll," etc.)
 ![image](https://github.com/jpaskaruk/freetar/assets/5622722/aab53a99-566a-408f-9a47-79b85e7b89bc)
 
 
