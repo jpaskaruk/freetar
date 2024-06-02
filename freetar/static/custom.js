@@ -47,17 +47,17 @@ function initialise_transpose() {
     // Defines a list of notes, grouped with any alternate names (like D# and Eb)
     const noteNames = [
         ['A'],
-        ['A#', 'Bb'],
+        ['Bb','A#'],
         ['B','Cb'],
         ['C', 'B#'],
-        ['C#', 'Db'],
+        ['Db','C#'],
         ['D'],
-        ['D#', 'Eb'],
+        ['Eb','D#'],
         ['E', 'Fb'],
         ['F', 'E#'],
         ['F#', 'Gb'],
         ['G'],
-        ['G#', 'Ab'],
+        ['Ab','G#'],
     ];
 
     // Find the given note in noteNames, then step through the list to find the
@@ -83,9 +83,24 @@ function initialise_transpose() {
     }
 }
 
+function initialise_cols() {
+    let cols_value = 1;
+    const less = $('#cols_down');
+    const more = $('#cols_up');
+    more.click(function () {
+        cols_value += 1
+        document.body.style.columnCount = cols_value;
+    });
+    less.click(function () {
+        cols_value -= 1
+        document.body.style.columnCount = cols_value;
+    });
+}
+
 $(document).ready(function () {
     colorize_favs();
     initialise_transpose();
+    initialise_cols();
 });
 
 
